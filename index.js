@@ -15,14 +15,14 @@ app.all("/", function (req, res, next) {
     next();
 });
 
-app.get("/", (req, res) => {
-    res.send(
-        "This API crawled from https://tiemchungcovid19.gov.vn/portal. Add /all to the current URL to get vaccination data",
+// app.get("/", (req, res) => {
+//     res.send(
+//         "This API crawled from https://tiemchungcovid19.gov.vn/portal. Add /all to the current URL to get vaccination data",
         
-    );
-});
+//     );
+// });
 
-app.get("/all", (req, res) => {
+app.get("/", (req, res) => {
     const puppeteerRuner = async () => {
         const browser = await puppeteer.launch({
 
